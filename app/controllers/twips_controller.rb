@@ -4,6 +4,7 @@ class TwipsController < ApplicationController
   # GET /twips or /twips.json
   def index
     @twips = Twip.all.order("created_at DESC")
+    @twip = Twip.new
   end
 
   # GET /twips/1 or /twips/1.json
