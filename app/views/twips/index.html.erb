@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Twips</h1>
+
+<div id="twips">
+  <% @twips.each do |twip| %>
+    <%= render twip %>
+    <p>
+      <%= link_to "Show this twip", twip %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New twip", new_twip_path %>

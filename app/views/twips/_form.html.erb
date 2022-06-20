@@ -1,0 +1,22 @@
+<%= form_with(model: twip) do |form| %>
+  <% if twip.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(twip.errors.count, "error") %> prohibited this twip from being saved:</h2>
+
+      <ul>
+        <% twip.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :twip, style: "display: block" %>
+    <%= form.text_area :twip %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

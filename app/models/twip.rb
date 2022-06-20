@@ -1,0 +1,2 @@
+class Twip < ApplicationRecord
+end

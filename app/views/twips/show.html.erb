@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @twip %>
+
+<div>
+  <%= link_to "Edit this twip", edit_twip_path(@twip) %> |
+  <%= link_to "Back to twips", twips_path %>
+
+  <%= button_to "Destroy this twip", @twip, method: :delete %>
+</div>
