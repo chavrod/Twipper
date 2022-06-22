@@ -26,7 +26,7 @@ class TwipsController < ApplicationController
 
     respond_to do |format|
       if @twip.save
-        format.html { redirect_to twip_url(@twip), notice: "Twip was successfully created." }
+        format.html { redirect_to root_path, notice: "Twip was successfully created." }
         format.json { render :show, status: :created, location: @twip }
       else
         format.html { render :new, status: :unprocessable_entity }
