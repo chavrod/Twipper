@@ -1,5 +1,6 @@
 class TwipsController < ApplicationController
   before_action :set_twip, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, expect: [:index, :show]
 
   # GET /twips or /twips.json
   def index
