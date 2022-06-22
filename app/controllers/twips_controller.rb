@@ -14,7 +14,7 @@ class TwipsController < ApplicationController
 
   # GET /twips/new
   def new
-    @twip = Twip.new
+    @twip = current_user.twips.build
   end
 
   # GET /twips/1/edit
@@ -23,7 +23,7 @@ class TwipsController < ApplicationController
 
   # POST /twips or /twips.json
   def create
-    @twip = Twip.new(twip_params)
+    @twip = current_user.twips.build(twip_params)
 
     respond_to do |format|
       if @twip.save
